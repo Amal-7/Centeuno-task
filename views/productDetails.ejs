@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row ">
+       
+            <div class="card bg-light text-dark" style="width: 50rem;">
+              <img class="card-img-top" src="<%= product.item_image %>" alt="Card image cap">
+              
+              <div class="card-body">
+                <h5 class="card-title"><%= product.item_name %></h5>
+                <p class="card-text"> ID : <%= product.id %></p>
+                <p class="card-text">import_date :<%= product.import_date %></p>
+                <p class="card-text">expiration_date : <%= product.expiration_date %></p>
+                <p class="card-text">quantity : <%= product.item_quantity %></p>
+                <p class="card-text">Weight : <%= product.item_weight %></p>
+                <p class="card-text">tax : <%= product.item_tax %></p>
+                <p class="card-text">Availability : <%= product.item_availability%></p>
+               
+                
+                <a href="#" class="btn btn-primary">RS.<%= product.item_price %></a>
+              </div>
+        
+          </div>
+      
+    </div>
+  </div>

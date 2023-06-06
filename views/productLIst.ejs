@@ -1,0 +1,49 @@
+
+
+
+  <div class="container">
+    <div class="row d-flex align-content-stretch flex-wrap">
+      
+      <% products.forEach((product)=>{ %>
+        
+        <div class="col-md-4 col-sm-6 pb-2 ">
+          <a href="/api/products/<%= product.id %>" class="text-dark">
+            <div class="card bg-light text-dark" style="width: 18rem;">
+              <img class="card-img-top" src="<%= product.item_image %>" alt="Card image cap">
+              
+              <div class="card-body">
+                <h5 class="card-title"><%= product.item_name %></h5>
+                <p class="card-text"> ID : <%= product.id %></p>
+                <a href="#" class="btn btn-primary">RS.<%= product.item_price %></a>
+              </div>
+            </div>
+          </a>
+          </div>
+          
+          <%  }) %>
+      
+    </div>
+  </div>
+        
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination  justify-content-center" style="display: flex; gap: 25px;">
+      <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        
+        
+        <% pages.forEach(page=>{ %>
+    
+      <li class="page-item" ><a class="page-link"  href="/api/products/list?size=50&page=<%=page %>" aria-label="<%= page %>"><%= page %></a></li>
+      
+     <% }) %>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+  </ul>
+  </nav>
